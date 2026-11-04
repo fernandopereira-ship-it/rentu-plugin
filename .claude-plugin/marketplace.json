@@ -1,15 +1,16 @@
 {
   "name": "rentu",
   "owner": {
-    "name": "Rentu",
-    "url": "https://rentu.com.br"
+    "name": "Rentu"
   },
-  "description": "Plugin da Rentu para assistentes de IA.",
+  "metadata": {
+    "description": "Plugin da Rentu: imóveis compactos à venda em Florianópolis e diagnóstico de faturamento baseado em dados."
+  },
   "plugins": [
     {
       "name": "rentu-calculadora",
       "source": "./",
-      "description": "Calculadora de faturamento de aluguel por temporada, simulações e imóveis da Rentu pelo servidor MCP público de rentu.com.br."
+      "description": "Imóveis compactos à venda em Florianópolis e diagnóstico de faturamento baseado em dados, pelo servidor MCP público da Rentu."
     }
   ]
 }

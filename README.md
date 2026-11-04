@@ -1,50 +1,45 @@
-# Rentu para o Claude
+# rentu-calculadora
 
-Plugin do Claude (claude.ai, Cowork e Claude Code) que liga o servidor MCP público da Rentu
-(`https://rentu.com.br/api/mcp`) e traz a skill `calculadora-faturamento`, que explica a calculadora de diagnóstico de
-faturamento baseado em dados e os seus limites. A Rentu é uma imobiliária de Florianópolis/SC que vende compactos para
-aluguel por temporada.
+Plugin do Claude que liga o servidor MCP público da Rentu (`https://rentu.com.br/api/mcp`) e traz a skill
+`calculadora-faturamento`, que explica as ferramentas da calculadora de diagnóstico de faturamento baseado em dados e os seus limites. Feito para claude.ai, Cowork e Claude Code (veja Instalar).
 
-## Instalação
+## Instalar
 
-No Claude Code:
+- No Claude Code: `claude plugin install rentu-calculadora --marketplace fernandopereira-ship-it/rentu-plugin`
+- No claude.ai e no Cowork: o envio ao diretório da Anthropic está em andamento; ainda não dá para instalar por lá.
 
-```
-/plugin install rentu-calculadora --marketplace fernandopereira-ship-it/rentu-plugin
-```
+## Ferramentas
 
-No claude.ai e no Cowork, pelo diretório de plugins.
+Calculadora, sem login:
 
-## Ferramentas sem login
-
-- `estimar_faturamento_mercado`: faixa anual do diagnóstico de faturamento baseado em dados (P40, mediana e P70; P30 e
-  P80 com precisão menor) por cidade, bairro, quartos e padrão, com erro medido (ou o aviso de que não foi medido) e fonte.
+- `estimar_faturamento_mercado`: faixa anual do diagnóstico de faturamento baseado em dados (P40, mediana e P70; P30 e P80 com precisão menor) por cidade, bairro, quartos
+  e padrão, com erro medido (ou o aviso de que não foi medido) e fonte.
 - `comparar_configuracoes`: 2 a 4 configurações lado a lado, sem ranking.
 - `listar_bairros_estimativa`: onde há estimativa publicada.
-- `simular_financiamento`: parcela Price ou SAC de um preço informado, sem receita.
-- `tir_investimento`: simulação de TIR à vista e financiada, pelo código de um imóvel à venda na Rentu ou por preço e
-  receita informados, com fonte e aviso.
-- `buscar_imoveis`, `detalhe_imovel`, `listar_lancamentos` e `mercado_bairro`: imóveis à venda, lançamentos e o
-  mercado de temporada dos bairros onde a Rentu tem imóveis.
+- `simular_financiamento`: parcela pelo código de um imóvel à venda na Rentu ou por um preço informado, sem receita. Condomínio e IPTU entram no custo mensal.
 
-## Ferramentas com conta Rentu
+Imóveis e simulação, sem login:
 
-- `salvar_favorito`: salva um imóvel nos favoritos da conta.
-- `pedir_visita`: pede uma visita à especialista da Rentu, só com o consentimento explícito da pessoa.
+- `buscar_imoveis`: imóveis à venda na Rentu, com os filtros da página de compra.
+- `detalhe_imovel`: ficha de um imóvel pelo código.
+- `listar_lancamentos`: empreendimentos em lançamento.
+- `mercado_bairro`: mercado de aluguel por temporada de um bairro onde a Rentu tem imóveis.
+- `tir_investimento`: simulação de TIR à vista e financiado, pelo código do imóvel ou por um preço e uma receita informados.
 
-As duas agem na conta da pessoa e pedem login. Hoje o acesso é pelo token pessoal gerado em https://rentu.com.br/conta
-(cabeçalho `Authorization: Bearer`); o login pela conta Rentu direto no assistente está em implantação.
+Na conta da pessoa (ainda sem uso pelo plugin, veja o aviso abaixo):
 
-## Dados e limites
+- `salvar_favorito`: salva um imóvel nos favoritos da conta Rentu.
+- `pedir_visita`: envia um pedido de visita à especialista da Rentu, com os aceites de privacidade e de WhatsApp.
 
-Os números de mercado são estimativas com dados reais de anúncios do Airbnb (lista diária), nunca o resultado de um
-imóvel. Estimativa com dados reais do Airbnb. Não é promessa de renda.
+**Aviso: pelo plugin, `salvar_favorito` e `pedir_visita` ainda não funcionam.** As duas pedem o token pessoal criado em https://rentu.com.br/conta, e o plugin não tem onde usá-lo: o `.mcp.json` não leva cabeçalho. Até o login seguro entrar, elas só respondem como obter o token e nada é gravado. Para salvar um imóvel ou pedir uma visita hoje, use o site https://rentu.com.br.
 
-O plugin envia a `rentu.com.br` só os argumentos de cada chamada (e o token, nas duas ferramentas com conta). O servidor
-guarda um registro de cada chamada (IP em hash, navegador e argumentos filtrados) por 5 anos e não o repassa a outros
-serviços. Privacidade: https://rentu.com.br/privacidade. Termos: https://rentu.com.br/termos. Documentação:
-https://rentu.com.br/mcp.
+## O que o plugin envia a rentu.com.br
 
-## Licença
+O plugin não guarda nada no seu computador e não roda programa local. A cada uso de uma ferramenta, o assistente envia a `https://rentu.com.br/api/mcp` os argumentos daquela ferramenta e, se houver, o token.
+`pedir_visita` envia também nome, WhatsApp, e-mail e mensagem, que viram o pedido de visita.
+O servidor registra cada chamada, com IP em hash, navegador e argumentos sem os dados pessoais, e não repassa esse registro a outros serviços. O prazo de guarda e os seus direitos estão em https://rentu.com.br/privacidade.
 
-MIT. Veja `LICENSE`.
+## Limites
+
+O diagnóstico de faturamento baseado em dados é do mercado, nunca de um imóvel anunciado. Estimativa com dados reais do Airbnb. Não é promessa de renda. A simulação de `tir_investimento` traz rótulo, fonte e aviso próprios e também não é garantia de retorno.
+Documentação: https://rentu.com.br/mcp.
