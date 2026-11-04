@@ -4,13 +4,13 @@
     "name": "Rentu"
   },
   "metadata": {
-    "description": "Plugin da Rentu: imóveis compactos à venda em Florianópolis e diagnóstico de faturamento baseado em dados."
+    "description": "Plugin da Rentu: diagnóstico de faturamento baseado em dados e simulação de financiamento."
   },
   "plugins": [
     {
       "name": "rentu-calculadora",
       "source": "./",
-      "description": "Imóveis compactos à venda em Florianópolis e diagnóstico de faturamento baseado em dados, pelo servidor MCP público da Rentu."
+      "description": "Diagnóstico de faturamento baseado em dados e simulação de financiamento, sem login, pelo servidor MCP público da Rentu."
     }
   ]
 }

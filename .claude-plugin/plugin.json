@@ -1,8 +1,8 @@
 {
   "name": "rentu-calculadora",
   "displayName": "Rentu",
-  "version": "0.2.1",
-  "description": "Imóveis compactos à venda em Florianópolis e diagnóstico de faturamento baseado em dados de anúncios do Airbnb parecidos, por bairro, quartos e padrão (com erro medido e fonte), além de comparação de configurações, simulação de financiamento e de TIR, pelo servidor MCP público da Rentu.",
+  "version": "0.3.0",
+  "description": "Calculadora de diagnóstico de faturamento baseado em dados de anúncios do Airbnb parecidos, por bairro, quartos e padrão (com erro medido e fonte), comparação de configurações e simulação de financiamento, sem login, pelo servidor MCP público da Rentu.",
   "author": {
     "name": "Rentu"
   },
