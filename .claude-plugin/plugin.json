@@ -1,0 +1,21 @@
+{
+  "name": "rentu-calculadora",
+  "displayName": "Rentu",
+  "version": "0.2.0",
+  "description": "Plugin da Rentu para o Claude: diagnóstico de faturamento de aluguel por temporada baseado em dados de anúncios do Airbnb parecidos (por bairro, quartos e padrão, com erro medido e fonte), comparação de configurações, simulação de financiamento e de TIR, busca de imóveis à venda e lançamentos da Rentu, pelo servidor MCP público de rentu.com.br.",
+  "author": {
+    "name": "Rentu",
+    "url": "https://rentu.com.br"
+  },
+  "homepage": "https://rentu.com.br/mcp",
+  "repository": "https://github.com/fernandopereira-ship-it/rentu-plugin",
+  "license": "MIT",
+  "keywords": [
+    "rentu",
+    "mcp",
+    "aluguel-por-temporada",
+    "estimativa-de-mercado",
+    "financiamento"
+  ],
+  "privacyPolicyUrl": "https://rentu.com.br/privacidade"
+}

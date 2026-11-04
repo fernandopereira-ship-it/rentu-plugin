@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "rentu": {
+      "type": "http",
+      "url": "https://rentu.com.br/api/mcp"
+    }
+  }
+}

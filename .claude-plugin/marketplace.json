@@ -1,0 +1,15 @@
+{
+  "name": "rentu",
+  "owner": {
+    "name": "Rentu",
+    "url": "https://rentu.com.br"
+  },
+  "description": "Plugin da Rentu para assistentes de IA.",
+  "plugins": [
+    {
+      "name": "rentu-calculadora",
+      "source": "./",
+      "description": "Calculadora de faturamento de aluguel por temporada, simulações e imóveis da Rentu pelo servidor MCP público de rentu.com.br."
+    }
+  ]
+}
