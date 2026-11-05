@@ -17,7 +17,7 @@ As 6 da calculadora, sem login:
 - `comparar_configuracoes`: 2 a 4 configurações lado a lado, sem ranking.
 - `listar_bairros_estimativa`: onde há estimativa publicada.
 - `simular_financiamento`: parcela pelo código de um imóvel à venda na Rentu ou por um preço informado, sem receita. Condomínio e IPTU entram no custo mensal.
-- `tir_investimento`: simulação à vista × financiado pelo código de um imóvel à venda na Rentu (com a estimativa da lista diária de anúncios do Airbnb, a fonte e o aviso) ou por um preço e uma receita informados.
+- `tir_investimento`: simulação à vista × financiado pelo código de um imóvel à venda na Rentu (só se a página dele mostra TIR, com a mesma receita, os mesmos custos, a fonte e o aviso da página; senão, recusa) ou por um preço e uma receita informados.
 - `comparar_imoveis`: 2 ou 3 imóveis à venda na Rentu lado a lado pelo código, com os números da página Comparar imóveis do site, cada um com rótulo, fonte e aviso.
 
 Busca e ficha de imóveis, lançamentos, mercado por bairro, favoritos e pedido de visita pelo plugin: em breve com login. Hoje, use o site https://rentu.com.br.
