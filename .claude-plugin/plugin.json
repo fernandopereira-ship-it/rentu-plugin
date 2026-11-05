@@ -1,8 +1,8 @@
 {
   "name": "rentu-calculadora",
   "displayName": "Rentu",
-  "version": "0.3.0",
-  "description": "Calculadora de diagnóstico de faturamento baseado em dados de anúncios do Airbnb parecidos, por bairro, quartos e padrão (com erro medido e fonte), comparação de configurações e simulação de financiamento, sem login, pelo servidor MCP público da Rentu.",
+  "version": "0.4.0",
+  "description": "Calculadora da Rentu sem login: diagnóstico de faturamento baseado em dados de anúncios do Airbnb parecidos, por bairro, quartos e padrão (com erro medido e fonte), comparação de configurações, simulação de financiamento, simulação à vista × financiado e comparação de imóveis à venda na Rentu, pelo servidor MCP público da Rentu.",
   "author": {
     "name": "Rentu"
   },
@@ -14,7 +14,8 @@
     "mcp",
     "aluguel-por-temporada",
     "estimativa-de-mercado",
-    "financiamento"
+    "financiamento",
+    "comparar-imoveis"
   ],
   "icon": "./icon.png",
   "documentationUrl": "https://rentu.com.br/mcp",

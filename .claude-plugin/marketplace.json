@@ -4,13 +4,13 @@
     "name": "Rentu"
   },
   "metadata": {
-    "description": "Plugin da Rentu: diagnóstico de faturamento baseado em dados e simulação de financiamento."
+    "description": "Plugin da Rentu: diagnóstico de faturamento baseado em dados, simulação de financiamento e comparação de imóveis."
   },
   "plugins": [
     {
       "name": "rentu-calculadora",
       "source": "./",
-      "description": "Diagnóstico de faturamento baseado em dados e simulação de financiamento, sem login, pelo servidor MCP público da Rentu."
+      "description": "Diagnóstico de faturamento baseado em dados, simulação de financiamento, simulação à vista × financiado e comparação de imóveis, sem login, pelo servidor MCP público da Rentu."
     }
   ]
 }
